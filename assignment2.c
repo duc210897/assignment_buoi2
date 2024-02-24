@@ -1,6 +1,8 @@
 #include "stdio.h"
 #include "stdlib.h"
 
+#define CHECK_SO_NGUYEN_TO(x, y)       (x%y)
+
 int main(int argc, char *argv[]) {
     if (argc != 3) {
         printf("Usage: %s <number>\\n", argv[0]);
@@ -33,7 +35,7 @@ int main(int argc, char *argv[]) {
         }
         for(int j = 2; j <= i/2; j++)
         {
-           if(i%j == 0)
+           if(CHECK_SO_NGUYEN_TO(i, j) == 0)
            {
             flag = 1;
             break;
